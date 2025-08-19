@@ -170,60 +170,9 @@ Write Once, Run Anywhere (WORA)
 
 ---
 
-## 4. Practical Examples
+## 4. Interview Preparation Tips
 
-### Example 1: Simple Java Program
-
-class Hello {
-    public static void main(String[] args) {
-        int x = 10;
-        int y = 20;
-        System.out.println("Sum = " + (x + y));
-    }
-}
-
-#### Execution Flow
-1. **Save File**: `Hello.java`  
-2. **Compile**:  
-   javac Hello.java  
-   → generates `Hello.class`  
-3. **Run**:  
-   java Hello  
-4. **Output**:  
-   Sum = 30  
-
----
-
-### Example 2: JVM Threads & Stack
-
-class Worker implements Runnable {
-    public void run() {
-        System.out.println("Thread running: " + Thread.currentThread().getName());
-    }
-
-    public static void main(String[] args) {
-        Thread t1 = new Thread(new Worker());
-        Thread t2 = new Thread(new Worker());
-        t1.start();
-        t2.start();
-    }
-}
-
-#### Execution Flow
-1. **Save File**: `Worker.java`  
-2. **Compile**:  
-   javac Worker.java  
-3. **Run**:  
-   java Worker  
-4. **Sample Output** *(may vary due to thread scheduling)*:  
-   Thread running: Thread-0  
-   Thread running: Thread-1
-
----
-
-## 5. Interview Preparation Tips
-
-### 5.1 Essential Interview Questions
+### 4.1 Essential Interview Questions
 
 1. **"Why did you choose Java for your backend project?"**
    - Platform independence
@@ -262,7 +211,7 @@ class Worker implements Runnable {
    - Initializing: Set default values, execute static blocks
    - Linking: Connect references, verify bytecode
 
-### 5.2 Key Concepts to Emphasize
+### 4.2 Key Concepts to Emphasize
 - **Memory Management:** Stack vs Heap, thread isolation
 - **Performance:** JIT optimization, bytecode benefits
 - **Architecture:** Understanding of JVM internals shows depth
@@ -270,9 +219,9 @@ class Worker implements Runnable {
 
 ---
 
-## 6. Common Mistakes or Misunderstandings
+## 5. Common Mistakes or Misunderstandings
 
-### 6.1 Conceptual Mistakes
+### 5.1 Conceptual Mistakes
 
 **❌ "Java is purely interpreted"**
 ✅ Java is compiled to bytecode, then interpreted by JVM
@@ -286,7 +235,7 @@ class Worker implements Runnable {
 **❌ "Java is slow because of JVM overhead"**
 ✅ JIT compiler optimization often makes Java competitive with native code
 
-### 6.2 Implementation Mistakes
+### 5.2 Implementation Mistakes
 
 ```java
 // ❌ Wrong: Assuming shared variables between threads are safe
@@ -312,9 +261,9 @@ public class GoodThreadExample {
 
 ---
 
-## 7. Tooling & IDE Integration
+## 6. Tooling & IDE Integration
 
-### 7.1 Required Setup
+### 6.1 Required Setup
 
 **Java Development Kit (JDK):**
 ```bash
@@ -331,7 +280,7 @@ java -version
 - **IntelliJ IDEA:** Professional, feature-rich
   - Better debugging and profiling tools
 
-### 7.2 Essential Commands
+### 6.2 Essential Commands
 ```bash
 # Compile Java file
 javac ClassName.java
@@ -348,9 +297,9 @@ javap -c ClassName
 
 ---
 
-## 8. Advanced Notes / Behind the Scenes
+## 7. Advanced Notes / Behind the Scenes
 
-### 8.1 Memory Model Deep Dive
+### 7.1 Memory Model Deep Dive
 ```
 JVM Memory Layout:
 ┌─────────────────────────────────────────┐
@@ -369,13 +318,13 @@ JVM Memory Layout:
 └─────────────────┘ ┌─────────────────┘
 ```
 
-### 8.2 Performance Considerations
+### 7.2 Performance Considerations
 - **Warm-up time:** JIT compiler needs time to optimize
 - **Memory overhead:** JVM itself consumes ~50-100MB
 - **Garbage collection:** Automatic memory management has cost
 - **Bytecode verification:** Security check adds startup time
 
-### 8.3 Future Migration to Rust
+### 7.3 Future Migration to Rust
 The course may transition to Rust for:
 - **Memory management:** Manual control without garbage collection
 - **Performance:** Zero-cost abstractions
@@ -384,7 +333,7 @@ The course may transition to Rust for:
 
 ---
 
-## 9. Footnotes / Glossary
+## 8. Footnotes / Glossary
 
 **Bytecode:** Intermediate representation between source code and machine code, platform-independent
 

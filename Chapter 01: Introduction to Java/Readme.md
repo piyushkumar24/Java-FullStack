@@ -74,9 +74,9 @@ Development Environments:
 │ - Optimization  │    │ - Resource usage│
 └─────────────────┘    └─────────────────┘
 
-- **Compiled Languages**: Entire code is converted before execution.
-- **Interpreted Languages**: Execute line-by-line at runtime.
-- **Java**: Hybrid → Compiled (to bytecode) **and** Interpreted (by JVM).
+- Compiled Language*: Entire code is converted before execution.
+- Interpreted Languages: Execute line-by-line at runtime.
+- Java: Hybrid → Compiled (to bytecode) **and** Interpreted (by JVM).
 ```
 
 ### 2.2 Java: Compiled AND Interpreted

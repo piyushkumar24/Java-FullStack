@@ -47,15 +47,7 @@ Source Code (.java)
 
 ## 1. Why Java for Backend Development?
 
-### 1.1 The Modern Context
-According to industry leaders like Narayana Murthy, focusing on advanced backend skills is crucial as AI and LLMs are replacing basic programming tasks. This course targets serious developers who want to understand:
-- How industry-level deployment works
-- How to write scalable code
-- Unit and functional testing
-- Building scalable systems
-- Cloud deployment strategies
-
-### 1.2 Java's Advantages for Backend
+### Java's Advantages for Backend
 
 **Object-Oriented Programming Language:**
 - Classes and objects provide clear structure

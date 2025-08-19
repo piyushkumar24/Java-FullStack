@@ -49,22 +49,14 @@ Source Code (.java)
 
 ### Java's Advantages for Backend
 
-**Object-Oriented Programming Language:**
-- Classes and objects provide clear structure
-- Encapsulation and inheritance support large codebases
-- Clear separation of concerns
-
-**Balanced Abstraction Level:**
-- Not too low-level (like C++)
-- Not too high-level (like Python/JavaScript)
-- Forces developers to understand underlying mechanisms
-- Allows deep diving into implementation details
-
-**Rich Ecosystem:**
-- Mature frameworks (Spring Boot)
-- Extensive libraries
-- Strong community support
-- Enterprise-grade tools
+- **Object-Oriented Language**: Teaches real-world abstraction via classes and objects.
+- Balanced: Neither too low-level (like C++) nor too high-level (like Python).
+- Encourages exploring **how things work internally**.
+- Rich features:
+  - Threads, concurrency, CompletableFutures
+  - Fork-Join parallel processing
+  - Modern improvements since Java 8
+- Platform independent via **bytecode**.
 
 ---
 
@@ -81,30 +73,19 @@ Development Environments:
 │ - Error checking│    │ - Output generation│
 │ - Optimization  │    │ - Resource usage│
 └─────────────────┘    └─────────────────┘
+
+- **Compiled Languages**: Entire code is converted before execution.
+- **Interpreted Languages**: Execute line-by-line at runtime.
+- **Java**: Hybrid → Compiled (to bytecode) **and** Interpreted (by JVM).
 ```
 
 ### 2.2 Java: Compiled AND Interpreted
 
-**Compilation Phase (Compile Time):**
-```java
-// source.java
-public class Hello {
-    public static void main(String[] args) {
-        int x = 10;
-        System.out.println("Hello World");
-    }
-}
-```
+1. Write code in `.java` file.
+2. Compiler (`javac`) converts code → **Bytecode (`.class`)**.
+3. Bytecode is **platform-independent**.
+4. JVM converts bytecode → **Machine code** for OS.
 
-**Compilation Command:**
-```bash
-javac Hello.java  # Creates Hello.class (bytecode)
-```
-
-**Interpretation Phase (Runtime):**
-```bash
-java Hello  # JVM interprets bytecode
-```
 
 ### 2.3 Comparison with Other Languages
 
@@ -170,154 +151,73 @@ Write Once, Run Anywhere (WORA)
 
 ### 3.3 JVM Components
 
-#### 3.3.1 Class Loader
-```
-Class Loading Process:
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   Loading   │ →  │Initializing │ →  │  Linking    │
-│             │    │             │    │             │
-│- Find class │    │- Set default│    │- Connect    │
-│- Read .class│    │  values     │    │  references │
-│- Load into  │    │- Execute    │    │- Verify     │
-│  memory     │    │  static     │    │  bytecode   │
-└─────────────┘    └─────────────┘    └─────────────┘
-```
+- **ClassLoader**:
+  - Loads classes from classpath.
+  - Performs *Loading → Initialization → Linking*.
+- **Bytecode Verifier**:
+  - Validates correctness and safety of bytecode.
+- **JVM Stack**:
+  - Each thread gets its own stack.
+  - Stores local variables & method calls.
+- **Method Area**:
+  - Stores class code and metadata.
+- **Registers (PC Register)**:
+  - Each thread has its own PC register to track execution.
+- **Execution Engine**:
+  - Runs bytecode instructions.
+  - Uses **JIT (Just-In-Time Compiler)** to optimize repeated code execution.
 
-**Example Class:**
-```java
-public class Car {
-    private String color = "white";  // Default value (Initializing)
-    private String model;
-    
-    public String getManual() {      // Method (Linking)
-        return "Drive safely";
-    }
-}
-```
-
-#### 3.3.2 Method Area
-- Stores class-level data
-- Contains method bytecode
-- Shared across all threads
-- Contains constant pool
-
-#### 3.3.3 JVM Stack (Per Thread)
-```
-Thread-Specific Stack:
-┌─────────────────────────────────┐
-│         Thread 1 Stack          │
-│  ┌─────────────────────────┐    │
-│  │    Local Variables      │    │
-│  │  x = 10, y = 20        │    │
-│  └─────────────────────────┘    │
-│  ┌─────────────────────────┐    │
-│  │    Method Calls         │    │
-│  │  main() → calculate()   │    │
-│  └─────────────────────────┘    │
-└─────────────────────────────────┘
-
-┌─────────────────────────────────┐
-│         Thread 2 Stack          │
-│  ┌─────────────────────────┐    │
-│  │    Local Variables      │    │
-│  │  n1 = 0, n2 = 1        │    │
-│  └─────────────────────────┘    │
-│  ┌─────────────────────────┐    │
-│  │    Method Calls         │    │
-│  │  main() → fibonacci()   │    │
-│  └─────────────────────────┘    │
-└─────────────────────────────────┘
-```
-
-#### 3.3.4 PC (Program Counter) Registers
-- Each thread has its own PC register
-- Points to currently executing instruction
-- Tracks execution progress per thread
-
-```java
-// Thread 1 execution
-int result = 3 + 4;  ← PC Register points here
-System.out.println(result);
-
-// Thread 2 execution  
-int fib = fibonacci(10);  ← Different PC Register points here
-```
-
-#### 3.3.5 JIT (Just-In-Time) Compiler
-- Optimizes frequently executed code
-- Converts bytecode to native machine code
-- Improves runtime performance
-- Caches optimized code for reuse
 
 ---
 
 ## 4. Practical Examples
 
-### 4.1 Basic Class Structure
-```java
-// Car.java
-public class Car {
-    // Instance variables
-    private String color;
-    private String model;
-    
-    // Constructor
-    public Car(String color, String model) {
-        this.color = color;
-        this.model = model;
-    }
-    
-    // Methods
-    public String getManual() {
-        return "1. Insert key\n2. Start engine\n3. Drive safely";
-    }
-    
-    public void displayInfo() {
-        System.out.println("Car: " + model + ", Color: " + color);
+### Example 1: Simple Java Program
+
+class Hello {
+    public static void main(String[] args) {
+        int x = 10;
+        int y = 20;
+        System.out.println("Sum = " + (x + y));
     }
 }
-```
 
-### 4.2 Multi-threading Example
-```java
-public class ThreadExample {
+#### Execution Flow
+1. **Save File**: `Hello.java`  
+2. **Compile**:  
+   javac Hello.java  
+   → generates `Hello.class`  
+3. **Run**:  
+   java Hello  
+4. **Output**:  
+   Sum = 30  
+
+---
+
+### Example 2: JVM Threads & Stack
+
+class Worker implements Runnable {
+    public void run() {
+        System.out.println("Thread running: " + Thread.currentThread().getName());
+    }
+
     public static void main(String[] args) {
-        // Thread 1: Simple calculation
-        Thread t1 = new Thread(() -> {
-            int result = 3 + 4;
-            System.out.println("Thread 1 result: " + result);
-        });
-        
-        // Thread 2: Fibonacci calculation
-        Thread t2 = new Thread(() -> {
-            int n1 = 0, n2 = 1;
-            System.out.print("Thread 2 Fibonacci: " + n1 + " " + n2);
-            for (int i = 2; i < 10; i++) {
-                int n3 = n1 + n2;
-                System.out.print(" " + n3);
-                n1 = n2;
-                n2 = n3;
-            }
-            System.out.println();
-        });
-        
+        Thread t1 = new Thread(new Worker());
+        Thread t2 = new Thread(new Worker());
         t1.start();
         t2.start();
     }
 }
-```
 
-### 4.3 Compilation and Execution
-```bash
-# Compile the Java file
-javac ThreadExample.java
-
-# Run the compiled bytecode
-java ThreadExample
-
-# Check Java version
-java -version
-```
+#### Execution Flow
+1. **Save File**: `Worker.java`  
+2. **Compile**:  
+   javac Worker.java  
+3. **Run**:  
+   java Worker  
+4. **Sample Output** *(may vary due to thread scheduling)*:  
+   Thread running: Thread-0  
+   Thread running: Thread-1
 
 ---
 

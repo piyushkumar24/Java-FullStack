@@ -301,6 +301,7 @@ javap -c ClassName
 
 ### 7.1 Memory Model Deep Dive
 ```
+
 JVM Memory Layout:
 ┌─────────────────────────────────────────┐
 │                 Heap                    │  ← Shared among threads

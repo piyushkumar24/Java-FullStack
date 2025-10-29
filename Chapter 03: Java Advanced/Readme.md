@@ -58,6 +58,7 @@ System.out.println(arr[1]); // 2
 - Can only store objects (not primitives directly)  
 - Provides rich methods like add(), remove(), contains()  
 
+```text
 Example:
 import java.util.*;
 
@@ -65,6 +66,7 @@ List<Integer> list = new ArrayList<>();
 list.add(10);
 list.add(20);
 System.out.println(list.get(1)); // 20
+```
 
 ### ✅ Key Differences
 
@@ -85,6 +87,7 @@ A **List** is an ordered collection that allows **duplicate elements** and provi
 ### 🔹 ArrayList
 `ArrayList` is a **resizable array** that automatically grows as elements are added.
 
+```text
 Example:
 import java.util.*;
 
@@ -97,12 +100,15 @@ public class Main {
         System.out.println(names); // [Piyush, Riya, Piyush]
     }
 }
+```
 
+```text
 Key Points:
 ✅ Maintains insertion order  
 ✅ Allows duplicates  
 ✅ Provides random access using index  
 ⚠️ Not synchronized (use Vector or Collections.synchronizedList() for thread safety)
+```
 
 ---
 
@@ -114,6 +120,7 @@ A **Set** is an **unordered collection** that does **not allow duplicates**.
 ### 🔹 HashSet
 `HashSet` uses a **hash table** internally to store unique elements.
 
+```text
 Example:
 import java.util.*;
 
@@ -126,11 +133,14 @@ public class Main {
         System.out.println(names); // [Riya, Piyush] (order not guaranteed)
     }
 }
+```
 
+```text
 Key Points:
 ✅ Does not allow duplicates  
 ⚡ Faster lookups due to hashing  
 ⚠️ No guaranteed order of elements  
+```
 
 ---
 
@@ -138,6 +148,8 @@ Key Points:
 
 ### 🔹 What is an Immutable List?
 An **Immutable List** cannot be modified after creation — useful for read-only or constant data.
+
+```text
 
 Example:
 import java.util.*;
@@ -149,11 +161,14 @@ public class Main {
         System.out.println(names);
     }
 }
+```
 
+```text
 Key Points:
 ✅ Fixed and read-only data  
 ✅ Thread-safe by design  
-⚠️ Cannot add/remove elements after creation  
+⚠️ Cannot add/remove elements after creation
+```
 
 ---
 
@@ -164,6 +179,8 @@ A **Map** stores data in **key–value pairs**. Each key is unique, and each map
 
 ### 🔹 HashMap
 `HashMap` is an implementation of `Map` that uses **hashing** for fast access.
+
+```text
 
 Example:
 import java.util.*;
@@ -177,12 +194,15 @@ public class Main {
         System.out.println(map); // {1=Aman, 2=Riya}
     }
 }
+```
 
+```
 Key Points:
 ✅ Stores data in key-value pairs  
 ✅ Keys are unique  
 ✅ Allows null keys and values  
-⚠️ Order not guaranteed  
+⚠️ Order not guaranteed
+```
 
 ---
 
@@ -191,6 +211,7 @@ Key Points:
 ### 🔹 What are Generics?
 Generics ensure **type safety** by enforcing that collections only hold specific types.
 
+```text
 Example:
 import java.util.*;
 
@@ -202,12 +223,14 @@ public class Main {
         System.out.println(numbers);
     }
 }
+```
 
+```text
 Key Points:
 ✅ Ensures compile-time type safety  
 ✅ Removes need for type casting  
 ✅ Increases code reliability  
-
+```
 ---
 
 ## 💡 7. Optionals
@@ -215,6 +238,7 @@ Key Points:
 ### 🔹 What is Optional?
 `Optional` is a container that may or may not hold a non-null value — used to avoid `NullPointerException`.
 
+```
 Example:
 import java.util.*;
 
@@ -228,11 +252,14 @@ public class Main {
         System.out.println(empty.orElse("Default")); // Default
     }
 }
+```
 
+```text
 Key Points:
 ✅ Prevents NullPointerExceptions  
 ✅ Encourages safe null handling  
 ✅ Provides methods like isPresent(), orElse(), ifPresent()  
+```
 
 ---
 
@@ -243,6 +270,7 @@ Key Points:
 - Cannot have method implementations (except default/static).  
 - Used to achieve **abstraction** and **multiple inheritance**.
 
+```text
 Example:
 interface Animal {
     void sound();
@@ -253,18 +281,21 @@ class Dog implements Animal {
         System.out.println("Woof!");
     }
 }
+```
 
 ### 🔹 Class
 - Defines **data members and methods** together.  
 - Can have both implemented and non-implemented methods.  
 - Used to create **objects**.
 
+```text
 Example:
 class Cat {
     void sound() {
         System.out.println("Meow!");
     }
 }
+```
 
 ### ✅ Key Differences
 

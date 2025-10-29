@@ -1,4 +1,4 @@
-# Chapter 1: Java Fundamentals - Classes, Objects, Data Types, and Memory Management
+# Chapter 2: Java Basics
 
 ## Overview
 

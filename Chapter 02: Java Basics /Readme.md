@@ -1,4 +1,4 @@
-# 🧩 Chapter 2: Introduction to Java Basics & OOPs Concepts ☕
+# 🧩 Chapter 2: Introduction to Java Basics & OOPs Concepts 
 
 ---
 

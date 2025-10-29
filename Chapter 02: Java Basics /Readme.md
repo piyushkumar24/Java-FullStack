@@ -45,12 +45,11 @@ This defines a structure, but **no memory is allocated** yet.
 An **object** is an **instance** of a class — a real entity created using the `new` keyword.
 
 ```
-```java
+java
 Student s1 = new Student();
 s1.name = "Piyush";
 s1.roll = 1;
 s1.marks = 95;
-```
 ```
 
 Each object has its own copy of the data members.
@@ -58,6 +57,7 @@ Each object has its own copy of the data members.
 ---
 
 ### 🔹 Memory Allocation — Stack vs Heap
+
 | Type | Stores | Lifetime | Example |
 |------|---------|-----------|----------|
 | **Stack** | Method calls, primitive variables, object references | Temporary (cleared after function ends) | `int x = 10` |
@@ -88,11 +88,10 @@ Wrapper classes convert primitives into objects (used in Collections, generics, 
 
 Example:
 ```
-```java
+java
 int a = 5;
 Integer obj = a; // Auto-boxing
 int b = obj;     // Unboxing
-```
 ```
 
 ---
@@ -100,7 +99,7 @@ int b = obj;     // Unboxing
 ## 💻 Practical Example
 
 ```
-```java
+java
 class Car {
     String brand;
     int speed;
@@ -124,7 +123,6 @@ public class Main {
         c2.accelerate();
     }
 }
-```
 ```
 
 Output:

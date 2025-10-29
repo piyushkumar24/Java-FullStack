@@ -1,4 +1,4 @@
-# 📘 Chapter 3: Java Advanced: Collections Framework — Arrays, List, Set, Map, Generics & Optionals
+# 📘 Chapter 3: Java Advanced: Collections Framework 
 
 ---
 

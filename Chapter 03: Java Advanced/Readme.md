@@ -20,18 +20,19 @@ Understanding these topics gives us the power to handle data efficiently in Java
 
 ## 🧭 Concept Map
 
-📦 **Collection (Interface)**
+```text
+📦 Collection (Interface)
 │
-├── 🗂️ **List (Interface)**
-│   ├── 📋 ArrayList  
+├── 🗂️ List (Interface)
+│   ├── 📋 ArrayList
 │   └── 🔗 LinkedList
 │
-├── 🧱 **Set (Interface)**
-│   ├── 🧩 HashSet  
+├── 🧱 Set (Interface)
+│   ├── 🧩 HashSet
 │   └── 🌲 TreeSet
 │
-└── 🗺️ **Map (Interface)**
-    ├── 🧭 HashMap  
+└── 🗺️ Map (Interface)
+    ├── 🧭 HashMap
     └── 🌳 TreeMap
 
 

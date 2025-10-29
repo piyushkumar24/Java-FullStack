@@ -177,4 +177,3 @@ Can extend this project to include:
 | **Hibernate** | ORM tool that maps Java objects to database tables for persistence. |
 
 ---
-

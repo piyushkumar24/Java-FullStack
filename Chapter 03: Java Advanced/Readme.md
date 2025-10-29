@@ -47,9 +47,11 @@ Understanding these topics gives us the power to handle data efficiently in Java
 - Access elements using index  
 - Faster, but less flexible  
 
+```text
 Example:
 int[] arr = {1, 2, 3};
 System.out.println(arr[1]); // 2
+```
 
 ### 🔹 Lists
 - Dynamic size — grows and shrinks automatically  

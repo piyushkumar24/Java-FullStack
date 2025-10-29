@@ -28,14 +28,14 @@ Wrapper Classes → Convert primitives to objects
 A **class** in Java is a **blueprint** or **template** that defines properties (data) and behaviors (functions or methods).
 
 ```
-```java
+java
 class Student {
     String name;
     int roll;
     int marks;
 }
 ```
-```
+
 
 This defines a structure, but **no memory is allocated** yet.
 

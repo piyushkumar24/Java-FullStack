@@ -19,7 +19,6 @@ IRCTC Ticket Booking System
 │   ├── Ticket
 │
 └── Service Layer
-    ├── BookingService
+    ├── UserBookingService
     ├── TrainService
-    └── UserService
 ```
